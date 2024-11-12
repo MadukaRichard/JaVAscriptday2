@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of a triangle</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <style>
+        body{
+            background-color: rgba(186, 231, 248, 0.4);
+        }
+        .soft{
+            background: linear-gradient(140deg, blue, lightblue);
+            color: white;  
+        }
+        .button{
+            background: linear-gradient(140deg, lightblue, blue);
+            color: white;
+            border: 0;
+            border-radius: 5px;
+        }
+        #result{
+            padding-top: 1em;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="w-25 rounded p-3 m-auto shadow soft">
+        <h1>A script to find the area of a triangle.</h1>
+        <div>
+            <p>Enter Base:<input type="number" class="form-control mt-3 base" placeholder="Enter base in cm" id="BASE"></p>
+            <p>Enter Height:<input type="number" class="form-control mt-3 height" placeholder="Enter height in cm" id="HEIGHT"></p>
+            <button onclick="triangleArea()" class="button">Find Area</button>
+        </div>
+        <div id="result" ></div>
+    </div>
+</body>
+<script>
+    // let myValue = prompt ('Enter base:' , 'in cm');
+    // let myValue2 = prompt('Enter height:', 'in cm');
+    // alert(`The area of the triangle is: ${myValue2}`);
+function triangleArea() {
+    let base = document.getElementById('BASE').value;
+    let height = document.getElementById('HEIGHT').value;
+    let success = document.getElementById('result').innerHTML = (`The Area of the triangle is: ${0.5*base*height}cm`);
+    console.log(success);
+
+}
+
+
+</script>
+</html>
